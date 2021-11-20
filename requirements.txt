@@ -1,0 +1,12 @@
+h5py==3.1.0
+joypy==0.2.5
+matplotlib==3.4.2+computecanada
+numpy==1.21.0+computecanada
+pandas==1.2.3
+Pillow==8.4.0
+scikit_learn==1.0.1
+scipy==1.6.0
+seaborn==0.11.2
+torch==1.8.1
+torchvision==0.9.1
+tqdm==4.60.0
