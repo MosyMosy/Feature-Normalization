@@ -35,13 +35,13 @@ To install all requirements, use "pip install -r requirements.txt"
 
 |               | Baseline BN                                                                                                                                                                                                                       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| To Train:     | https://github.com/MosyMosy/STARTUP/tree/main/teacher_miniImageNet                                                                                                                                           |
+| To Train:     | https://anonymous.4open.science/r/STARTUP-7260/tree/main/teacher_miniImageNet                                                                                                                                           |
 | To Fine-Tune: | python finetune.py --save_dir ./logs/baseline_teacher --target_dataset {Target dataset name} --subset_split datasets/split_seed_1/{Target dataset name} \_labeled_80.csv --embedding_load_path ./logs/baseline_teacher/checkpoint_best.pkl --freeze_backbone  |
 |               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_teacher/checkpoint_best.pkl)                                                                                                          |
 
 |               | Baseline FN                                                                                                                                                                                                                      |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| To Train:     | https://github.com/MosyMosy/STARTUP/tree/main/teacher_miniImageNet_na                                                                                                                                            |
+| To Train:     | https://anonymous.4open.science/r/STARTUP-7260/tree/main/teacher_miniImageNet_na                                                                                                                                            |
 | To Fine-Tune: | python finetune.py --save_dir ./logs/baseline_na_teacher --target_dataset {Target dataset name} --subset_split datasets/split_seed_1/{Target dataset name} \_labeled_80.csv --embedding_load_path ./logs/baseline_na_teacher/checkpoint_best.pkl --freeze_backbone  |
 |               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_na_teacher/checkpoint_best.pkl)                                                                                                          |
 
