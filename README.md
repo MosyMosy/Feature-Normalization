@@ -17,12 +17,11 @@ This codebase is tested with:
 11. torchvision==0.9.1
 12. tqdm==4.60.0
 
-Or, use "pip install -r requirements.txt"
+To install all requirements, use "pip install -r requirements.txt"
 
 ## Running Experiments 
 ### Dataset Preparation
 **MiniImageNet and CD-FSL:** Download the datasets for CD-FSL benchmark following step 1 and step 2 here: https://github.com/IBM/cdfsl-benchmark  
-**tieredImageNet:**.
 
 
 
