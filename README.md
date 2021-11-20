@@ -33,13 +33,13 @@ To install all requirements, use "pip install -r requirements.txt"
 
 |               | Baseline BN                                                                                                                                                                                                                       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| To Train:     | https://github.com/cpphoo/STARTUP/tree/main/teacher_ImageNet                                                                                                                                             |
+| To Train:     | https://github.com/MosyMosy/STARTUP/tree/main/teacher_miniImageNet                                                                                                                                           |
 | To Fine-Tune: | python finetune.py --save_dir ./logs/baseline_teacher --target_dataset {Target dataset name} --subset_split datasets/split_seed_1/{Target dataset name} \_labeled_80.csv --embedding_load_path ./logs/baseline_teacher/checkpoint_best.pkl --freeze_backbone  |
 |               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_teacher/checkpoint_best.pkl)                                                                                                          |
 
 |               | Baseline FN                                                                                                                                                                                                                      |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| To Train:     | https://github.com/cpphoo/STARTUP/tree/main/teacher_ImageNet                                                                                                                                             |
+| To Train:     | https://github.com/MosyMosy/STARTUP/tree/main/teacher_miniImageNet_na                                                                                                                                            |
 | To Fine-Tune: | python finetune.py --save_dir ./logs/baseline_na_teacher --target_dataset {Target dataset name} --subset_split datasets/split_seed_1/{Target dataset name} \_labeled_80.csv --embedding_load_path ./logs/baseline_na_teacher/checkpoint_best.pkl --freeze_backbone  |
 |               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_na_teacher/checkpoint_best.pkl)                                                                                                          |
 
@@ -79,4 +79,19 @@ To install all requirements, use "pip install -r requirements.txt"
 | To Fine-Tune: | python ImageNet_finetune.py --save_dir ./logs/ImageNet_nb --target_dataset {Target dataset name} --subset_split datasets/split_seed_1/{Target dataset name} \_labeled_80.csv --embedding_load_path ./logs/baseline_teacher/checkpoint_best.pkl --freeze_backbone  |
 |               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/ImageNet_nb/checkpoint_best.pkl)                                                                                                          |
 
-
+|               | Near-domain few-shot evaluation |
+|---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+|               | Baseline BN  |
+| To Fine-Tune: | python finetune.py --save_dir ./logs/eval/baseline_teacher --target_dataset ImageNet_test --subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --embedding_load_path ./logs/baseline_teacher/checkpoint_best.pkl --freeze_backbone  |
+|               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_teacher/checkpoint_best.pkl) |
+|               | Baseline FN  |
+| To Fine-Tune: | python finetune.py --save_dir ./logs/eval/baseline_na_teacher --target_dataset ImageNet_test --subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --embedding_load_path ./logs/baseline_na_teacher/checkpoint_best.pkl --freeze_backbone  |
+|               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/baseline_teacher/checkpoint_best.pkl) |
+|               | AdaBN BN  |
+| To Train:     |  python AdaBN.py --dir ./logs/AdaBN_teacher/miniImageNet --base_dictionary logs/baseline_teacher/checkpoint_best.pkl --target_dataset ImageNet_test --target_subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --bsize 256 --epochs 10 --model resnet10 |
+| To Fine-Tune: | python finetune.py --save_dir ./logs/AdaBN_teacher/miniImageNet --target_dataset ImageNet_test --subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --embedding_load_path ./logs/AdaBN_teacher/miniImageNet/checkpoint_best.pkl --freeze_backbone |
+|               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/AdaBN_teacher/miniImageNet/checkpoint_best.pkl) |
+|               | AdaBN FN  |
+| To Train:     |  python AdaBN.py --dir ./logs/AdaBN_na_teacher/miniImageNet --base_dictionary logs/baseline_na_teacher/checkpoint_best.pkl --target_dataset ImageNet_test --target_subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --bsize 256 --epochs 10 --model resnet10 |
+| To Fine-Tune: | python finetune.py --save_dir ./logs/AdaBN_na_teacher/miniImageNet --target_dataset ImageNet_test --subset_split datasets/split_seed_1/ImageNet_val_labeled.csv --embedding_load_path ./logs/AdaBN_na_teacher/miniImageNet/checkpoint_best.pkl --freeze_backbone |
+|               | [Pre-Trained Dictionary](https://github.com/MosyMosy/FN_Model_Zoo/blob/main/Dictionaries/AdaBN_na_teacher/miniImageNet/checkpoint_best.pkl) |
