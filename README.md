@@ -25,6 +25,7 @@ To install all requirements, use "pip install -r requirements.txt"
 **Set datasets path:** Set the appropriate dataset pathes in "configs.py".
 
 **Source dataset names:** "ImageMet", "miniImageNet"
+
 **Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC", "ImageNet_test"
 
 
