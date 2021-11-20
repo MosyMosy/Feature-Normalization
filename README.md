@@ -23,6 +23,7 @@ To install all requirements, use "pip install -r requirements.txt"
 ### Dataset Preparation
 **MiniImageNet and CD-FSL:** Download the datasets for CD-FSL benchmark following step 1 and step 2 here: https://github.com/IBM/cdfsl-benchmark.
 **Set datasets path:** Set the appropriate dataset pathes in "configs.py".
+
 **Source dataset names:** "ImageMet", "miniImageNet"
 **Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC", "ImageNet_test"
 
