@@ -31,6 +31,8 @@ To install all requirements, use "pip install -r requirements.txt"
 
 **Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC"
 
+**All Baseline (miniImageNet) are trained Using an adapted version of the "https://github.com/cpphoo/STARTUP" repository**
+
 |               | Baseline BN                                                                                                                                                                                                                       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | To Train:     | https://github.com/MosyMosy/STARTUP/tree/main/teacher_miniImageNet                                                                                                                                           |
