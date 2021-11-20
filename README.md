@@ -26,7 +26,7 @@ To install all requirements, use "pip install -r requirements.txt"
 
 **Source dataset names:** "ImageNet", "miniImageNet"
 
-**Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC", "ImageNet_test"
+**Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC"
 
 |               | Baseline BN                                                                                                                                                                                                                       |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
