@@ -31,7 +31,7 @@ To install all requirements, use "pip install -r requirements.txt"
 
 **Target dataset names:** "EuroSAT", "CropDisease", "ChestX", "ISIC"
 
-** All the dataset train/validation split files located at "datasets/split_seed_1" directory **
+**All the dataset train/validation split files located at "datasets/split_seed_1" directory**
 
 **All Baseline (miniImageNet) are trained Using an adapted version of the "https://github.com/cpphoo/STARTUP" repository**
 
